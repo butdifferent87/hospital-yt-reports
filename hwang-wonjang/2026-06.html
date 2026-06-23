@@ -62,27 +62,25 @@
   .panel-long .stat{border-top:3px solid var(--long)}
   .panel-short .stat{border-top:3px solid var(--short)}
 
-  /* 진단 섹션 */
+  /* 진단 */
   .diag{background:var(--diagbg); border:1px solid var(--diagln); border-radius:18px; padding:18px 18px 20px; margin:14px 0}
   .diag .dh{font-size:16px; font-weight:800; color:var(--diag); display:flex; align-items:center; gap:7px; letter-spacing:-.3px}
   .diag .dq{font-size:13px; color:#7a4a30; font-weight:600; margin-top:4px; margin-bottom:14px}
+  .blk{font-size:12px;font-weight:800;color:#7a4a30;margin:16px 0 10px}
   .catbar{display:flex; align-items:center; gap:10px; margin-bottom:9px; font-size:13px}
   .catbar .ck{width:96px; flex:none; font-weight:700}
   .catbar .ct{flex:1; background:#f0ddd0; border-radius:999px; height:16px; overflow:hidden}
   .catbar .cf{display:block; height:100%; border-radius:999px}
-  .catbar .cp{width:34px; flex:none; text-align:right; font-weight:800}
+  .catbar .cp{width:54px; flex:none; text-align:right; font-weight:800; font-size:12px}
   .cf.bait{background:#e0883c} .cf.core{background:var(--accent)} .cf.etc{background:#b9c2cf}
   .catbar .ck.bait{color:#c2410c} .catbar .ck.core{color:var(--accent)}
-  .leg{font-size:11.5px; color:var(--muted); margin:4px 0 16px; display:flex; gap:14px; flex-wrap:wrap}
-  .leg span{display:inline-flex; align-items:center; gap:5px}
-  .leg i{width:9px; height:9px; border-radius:2px; display:inline-block}
-  .diag .find{font-size:14px; color:#5a3826; line-height:1.7; padding-top:14px; border-top:1px solid var(--diagln)}
+  .src{display:flex;gap:8px;margin:6px 0 4px;flex-wrap:wrap}
+  .srccard{flex:1;min-width:90px;background:#fff;border:1px solid var(--diagln);border-radius:10px;padding:9px 11px;text-align:center}
+  .srccard .sl{font-size:11px;color:var(--muted);font-weight:600}
+  .srccard .sv{font-size:19px;font-weight:800;margin-top:2px}
+  .srccard.hi .sv{color:var(--accent)}
+  .diag .find{font-size:14px; color:#5a3826; line-height:1.7; padding-top:14px; border-top:1px solid var(--diagln); margin-top:16px}
   .diag .find b{color:var(--diag)}
-  .ctrrow{display:flex; gap:8px; margin:14px 0; flex-wrap:wrap}
-  .ctrcard{flex:1; min-width:92px; background:#fff; border-radius:10px; padding:10px 12px; text-align:center; border:1px solid var(--diagln)}
-  .ctrcard .cl{font-size:11px; color:var(--muted); font-weight:600}
-  .ctrcard .cv{font-size:20px; font-weight:800; margin-top:3px}
-  .ctrcard.good .cv{color:var(--accent)} .ctrcard.bad .cv{color:var(--down)}
 
   .sec{margin:28px 0 12px}
   .sec h2{font-size:15px; font-weight:800; display:flex; align-items:center; gap:7px}
@@ -130,15 +128,15 @@
   <div class="verdict">
     <div class="tag">📊 이번 달 한 줄 평</div>
     <div class="line">조회수는 하루 +7.5% 늘었지만, 구독이 느는 속도는 24% 둔화됐습니다. (구독자 수는 계속 늘고 있습니다)</div>
-    <div class="line">더 큰 문제는 ‘누가 보고 있나’입니다 — 시청자의 절반이 <b>체질·건강 영상층</b>(전국 일반인)이라, 내원으로 잘 이어지지 않습니다.</div>
-    <div class="line sub">정작 환자가 봐야 할 질환 영상은 노출돼도 클릭이 약합니다. 내원이 적은 구조적 이유가 여기 있습니다. (자세한 진단은 아래로)</div>
+    <div class="line">이 채널은 <b>검색으로 먹고사는 채널</b>입니다(조회의 65.6%가 검색). 사람들이 키워드를 직접 쳐서 찾아오는 — 신뢰받는 정보원이라는 좋은 신호입니다.</div>
+    <div class="line sub">다만 ‘체질’ 검색은 파이가 크고 ‘질환’ 검색은 작습니다. 그래서 질환 영상의 노출 기회가 12배 적고, 이것이 내원이 적은 진짜 이유입니다.</div>
   </div>
 
   <!-- 채널 전체 -->
   <div class="cmp">📊 하루 평균 · 5월 <span class="arrow">→</span> 6월</div>
   <div class="grid">
     <div class="stat"><div class="k">조회수 / 하루</div><div class="prev">5월 769</div><div class="v">827</div><div class="d up">▲ +7.5%</div></div>
-    <div class="stat"><div class="k">하루 구독 증가 ⚠</div><div class="prev">5월 +1.45명</div><div class="v">+1.10명</div><div class="d down">▼ 속도 −24%</div></div>
+    <div class="stat"><div class="k">하루 구독 증가</div><div class="prev">5월 +1.45명</div><div class="v">+1.10명</div><div class="d down">▼ 속도 −24%</div></div>
     <div class="stat"><div class="k">노출수 / 하루</div><div class="prev">5월 2,477</div><div class="v">2,664</div><div class="d up">▲ +8%</div></div>
     <div class="stat"><div class="k">시청시간 / 하루</div><div class="prev">5월 10.4시간</div><div class="v">10.7시간</div><div class="d flat">▲ +3%</div></div>
   </div>
@@ -166,60 +164,54 @@
   <div class="sec"><h2><span class="dot"></span>심층 진단</h2></div>
   <div class="diag">
     <div class="dh">🔍 원장님 고민 — 왜 내원이 적을까?</div>
-    <div class="dq">“체질 영상만 뜨고 정작 질환 영상은 반응이 없다”는 느낌, 데이터로 확인됩니다.</div>
+    <div class="dq">“체질만 뜨고 질환 영상은 죽는다”는 느낌의 진짜 원인을 3단계로 확인했습니다.</div>
 
-    <div style="font-size:12px;font-weight:700;color:#7a4a30;margin-bottom:10px">누적 조회, 영상 주제별 비중</div>
-    <div class="catbar"><span class="ck bait">체질·건강일반</span><span class="ct"><span class="cf bait" style="width:51%"></span></span><span class="cp">51%</span></div>
-    <div class="catbar"><span class="ck etc" style="color:var(--muted)">기타 질환</span><span class="ct"><span class="cf etc" style="width:18%"></span></span><span class="cp">18%</span></div>
-    <div class="catbar"><span class="ck core">쇼그렌</span><span class="ct"><span class="cf core" style="width:15%"></span></span><span class="cp">15%</span></div>
-    <div class="catbar"><span class="ck core">대상포진/신경통</span><span class="ct"><span class="cf core" style="width:14%"></span></span><span class="cp">14%</span></div>
-    <div class="catbar"><span class="ck core">중증근무력증</span><span class="ct"><span class="cf core" style="width:2%"></span></span><span class="cp">2%</span></div>
-    <div class="catbar"><span class="ck core">말초신경병증</span><span class="ct"><span class="cf core" style="width:1%"></span></span><span class="cp">0.4%</span></div>
-    <div class="leg">
-      <span><i style="background:#e0883c"></i> 미끼(체질) — 일반인</span>
-      <span><i style="background:#0b7a5e"></i> 주력 질환 — 환자</span>
-      <span><i style="background:#b9c2cf"></i> 기타</span>
+    <div class="blk">① 이 채널은 ‘검색’ 채널 — 들어오는 길</div>
+    <div class="src">
+      <div class="srccard hi"><div class="sl">YouTube 검색</div><div class="sv">65.6%</div></div>
+      <div class="srccard"><div class="sl">재생목록</div><div class="sv">18.8%</div></div>
+      <div class="srccard"><div class="sl">탐색·추천</div><div class="sv">7.5%</div></div>
     </div>
+    <div style="font-size:12.5px;color:#7a4a30;line-height:1.6;margin-bottom:4px">시청자 대부분이 키워드를 직접 검색해 들어옵니다. 추천에 휩쓸린 게 아니라 <b>‘찾아서’ 오는 고관심 시청자</b>입니다.</div>
 
-    <div style="font-size:12px;font-weight:700;color:#7a4a30;margin-bottom:4px">왜 질환 영상은 안 뜰까 — 클릭률(CTR) 격차</div>
-    <div class="ctrrow">
-      <div class="ctrcard good"><div class="cl">체질 영상</div><div class="cv">9.7%</div></div>
-      <div class="ctrcard bad"><div class="cl">쇼그렌</div><div class="cv">3.9%</div></div>
-      <div class="ctrcard bad"><div class="cl">말초신경병증</div><div class="cv">2.5%</div></div>
-    </div>
+    <div class="blk">② 그런데 ‘질환’은 검색 파이가 작다 — 노출 기회 격차</div>
+    <div class="catbar"><span class="ck bait">체질 영상</span><span class="ct"><span class="cf bait" style="width:100%"></span></span><span class="cp">19,791</span></div>
+    <div class="catbar"><span class="ck core">대상포진</span><span class="ct"><span class="cf core" style="width:12.4%"></span></span><span class="cp">2,451</span></div>
+    <div class="catbar"><span class="ck core">쇼그렌</span><span class="ct"><span class="cf core" style="width:8.2%"></span></span><span class="cp">1,629</span></div>
+    <div class="catbar"><span class="ck core">말초신경병증</span><span class="ct"><span class="cf core" style="width:2.5%"></span></span><span class="cp">498</span></div>
+    <div style="font-size:11.5px;color:var(--muted);margin-bottom:4px">쇼츠 영상 1편당 평균 노출수 — 체질 영상이 질환의 <b>약 12배</b></div>
 
     <div class="find">
-      <b>진단 —</b> 채널 조회의 <b>절반(51%)이 체질 영상</b>에서 나오고, 신규 구독도 절반이 여기서 옵니다.
-      그런데 체질 영상 시청자는 <b>전국의 건강 호기심층</b>이지, 쇼그렌·말초신경병증을 앓는 ‘내원 가능 환자’가 아닙니다. <b>미끼가 엉뚱한 물고기를 잡고 있는 셈</b>입니다.<br><br>
-      반면 주력 4개 질환은 합쳐도 조회 31%뿐이고, <b>노출돼도 클릭률이 체질의 절반 이하</b>(쇼그렌 3.9%)라 도달이 약합니다. 쇼그렌은 85편이나 만들었지만 효율이 낮고, 말초·중증은 거의 만들지 않았습니다.<br><br>
-      <b>→ 내원이 적은 이유:</b> ①잘못된 시청자(체질=일반인)를 모으고 ②진짜 환자용 질환 영상은 클릭이 약해 도달이 안 되며 ③둘을 잇는 다리가 없습니다.
-      <span style="color:var(--muted)">(시청자 구성은 정황 근거입니다. 아래 ‘할 일 1번’으로 실제 확인할 수 있습니다.)</span>
+      <b>진단 —</b> 카피(썸네일)가 나쁜 것도, 추천에서 일반인에게 밀리는 것도 아닙니다(추천은 7.5%뿐).
+      이 채널은 검색으로 돌아가는데, <b>‘체질’을 검색하는 사람은 전국에 많고 ‘쇼그렌·말초’를 검색하는 환자는 적습니다.</b>
+      그래서 질환 영상은 노출 기회 자체가 12배 적고, 도달하는 환자 수가 구조적으로 작습니다.<br><br>
+      <b>→ 핵심:</b> 질환 검색 파이는 작지만, 거기 닿은 사람은 <b>‘찾아온 진짜 환자’</b>라 내원 가치가 높습니다. 조회수를 늘리는 게 아니라, <b>이 작은 파이를 100% 잡고 + 파이를 넓히는</b> 것이 답입니다. (방법은 아래 ‘할 일’)
     </div>
   </div>
 
   <!-- 모범 영상 -->
-  <div class="sec"><h2><span class="dot"></span>해답의 힌트 — 잘 된 질환 영상</h2></div>
+  <div class="sec"><h2><span class="dot"></span>해답의 힌트 — 파이를 넓힌 영상</h2></div>
   <div class="vid">
-    <div class="t">“대상포진 후 신경통? ‘이것’만 해결하면 금방 치료됩니다”</div>
+    <div class="t">“눈이 건조하고 입이 마른다, 당신도 쇼그렌증후군?”</div>
     <div class="row">
-      <div class="m"><div class="mk">조회수(6월)</div><div class="mv">2,686</div></div>
-      <div class="m"><div class="mk">끝까지 본 비율</div><div class="mv">69%</div></div>
-      <div class="m"><div class="mk">썸네일 클릭률</div><div class="mv">8.7%</div></div>
-      <div class="m"><div class="mk">하루 구독</div><div class="mv">6명</div></div>
+      <div class="m"><div class="mk">왜 좋은 모델</div><div class="mv" style="font-size:14px">증상→병명</div></div>
+      <div class="m"><div class="mk">잡는 대상</div><div class="mv" style="font-size:14px">미진단 환자</div></div>
     </div>
     <div class="why">
-      <b>이게 정답입니다 —</b> 유일하게 ‘체질급 성과(CTR 8.7%)’를 낸 질환 영상. 제목이 환자의 고통(“금방 치료”)을 정확히 건드렸습니다.
-      <b>모든 주력 질환 영상에 이 ‘증상 공감형’ 제목·썸네일 공식을 입히면</b> 질환 영상도 충분히 도달할 수 있다는 증거입니다.
+      <b>이게 파이를 넓히는 법입니다 —</b> 환자는 “쇼그렌”이라는 병명을 모릅니다. “눈이 건조하고 입이 마른다”를 검색하죠.
+      <b>증상을 제목 앞에 두면, 아직 병원에 안 간 미진단 환자</b>(가장 가치 높은 잠재 내원자)를 잡습니다. 병명 검색보다 파이도 큽니다.
+      모든 주력 질환을 ‘증상 키워드’ 제목으로 — 이것이 환자를 늘리는 1순위 전략입니다.
     </div>
   </div>
 
   <!-- 할 일 -->
-  <div class="sec"><h2><span class="dot"></span>다음 달 할 일 <span style="font-size:12px;color:var(--muted);font-weight:600">(<span class="star">★</span> = 원장님 결정/실행 필요)</span></h2></div>
+  <div class="sec"><h2><span class="dot"></span>타겟 환자 늘리는 법 <span style="font-size:12px;color:var(--muted);font-weight:600">(<span class="star">★</span> = 원장님 결정/실행 필요)</span></h2></div>
   <ul class="todos">
-    <li><span class="n">1</span><div><span class="star">★</span> 내원 환자에게 “유튜브 보고 오셨어요? 어떤 영상?” 묻기<small>지금은 어떤 영상이 내원을 만드는지 깜깜이입니다. 한 달만 메모해주시면, 진짜 전환 영상을 찾아 다음 리포트가 정확해집니다 (가장 중요)</small></div></li>
-    <li><span class="n">2</span><div>질환 영상 제목·썸네일을 ‘대상포진 이것만’ 공식으로<small>질환 영상은 클릭률(병목)이 문제. 증상·고통을 정면으로 건드리는 공감형 제목으로 바꾸면 같은 노출에서 더 많은 환자가 들어옵니다</small></div></li>
-    <li><span class="n">3</span><div>체질 영상 → 질환 영상으로 잇는 다리 걸기<small>체질 영상 고정댓글·끝화면에 “이런 증상이 있다면 쇼그렌 의심” 질환 영상 연결. (체질 영상을 ‘비공개’ 하는 건 비추 — 채널 도달의 절반이라 끄면 질환 영상까지 같이 죽습니다. 끄지 말고 다리를 거세요)</small></div></li>
-    <li><span class="n">4</span><div>주력 4질환 균형 맞추기<small>쇼그렌만 85편 몰렸고 말초신경병증(9편)·중증근무력증(15편)은 거의 없음. 환자가 검색하는 증상 각도로 말초·중증도 시리즈화</small></div></li>
+    <li><span class="n">1</span><div>‘증상 키워드’ 제목으로 미진단 환자 잡기<small>병명("쇼그렌") 대신 환자가 실제 검색하는 증상("눈·입 마름", "손발 저림 밤", "안면 마비")을 제목 앞에. 병원에 아직 안 간 환자 = 최고 가치 리드. 검색 파이도 더 큼</small></div></li>
+    <li><span class="n">2</span><div>대상포진에 제작 집중<small>주력 질환 중 검색 파이·클릭률 모두 최강(쇼츠·롱폼 둘 다 잘 됨). 내원 깔때기 1순위 — 여기에 편수를 몰아주세요</small></div></li>
+    <li><span class="n">3</span><div>질환별 ‘재생목록’ 만들기<small>전체 시청시간의 43%가 재생목록에서 나옵니다(체류 최고). 쇼그렌·대상포진별로 영상을 묶으면, 한 영상 본 환자가 다음으로 이어져 신뢰가 쌓이고 내원으로 연결됩니다</small></div></li>
+    <li><span class="n">4</span><div><span class="star">★</span> 내원 환자에게 “유튜브 어떤 영상 보고 오셨나” 묻기<small>KPI를 ‘조회수’에서 ‘내원’으로. 어떤 영상·증상이 실제 환자를 데려오는지 한 달만 메모하면, 그 주제에 집중할 수 있습니다 (가장 중요)</small></div></li>
+    <li><span class="n">5</span><div>말초신경병증·중증근무력증 양치기 중단<small>검색 파이가 매우 작아(노출 498/편) 편수를 늘려도 한계. 증상 키워드로 각도를 바꾸기 전엔 제작 비중 줄이기</small></div></li>
   </ul>
 
   <!-- 부록 -->
@@ -227,12 +219,11 @@
     <summary>부록 — 분석 기준</summary>
     <div class="app-body">
       <b>주제 분류:</b> 영상 제목 기준 — 체질·건강일반 / 쇼그렌 / 말초신경병증 / 중증근무력증 / 대상포진·신경통 / 기타질환.<br>
-      <b>형식 분류:</b> 길이 90초 이하 = 쇼츠, 초과 = 롱폼.<br>
-      <b>CTR(클릭률)·주제 비중:</b> 누적 전체 데이터(2024.4~2026.6) 기준 — 신호가 가장 강함.<br>
-      <b>‘하루 구독 증가’:</b> 하루에 순수하게 늘어난 구독자 수(가입−이탈). 줄었다 = 느는 속도가 둔화된 것이지 구독자 수가 감소한 게 아님.<br>
-      <b>월간 수치:</b> 5월 전체(31일) / 6월 1~21일 → 날짜 수가 달라 하루 평균으로 환산.<br>
-      <b>‘끝까지 본 비율’:</b> 시청시간 ÷ (조회수 × 영상 길이)로 산출한 근사값.<br>
-      ※ ‘시청자=일반인’ 판단은 주제 구성에 따른 정황 근거입니다. 할 일 1번(내원 문진)으로 실제 확인이 필요합니다.
+      <b>형식 분류:</b> 길이 90초 이하 = 쇼츠, 초과 = 롱폼. (노출·CTR 비교는 쇼츠끼리 동일 형식으로 비교)<br>
+      <b>노출/편·주제 비중:</b> 누적 전체 데이터(2024.4~2026.6) 기준.<br>
+      <b>트래픽 소스:</b> 지난 28일 도달률 — 검색 65.6% / 재생목록 18.8% / 탐색 7.5%.<br>
+      <b>‘하루 구독 증가’:</b> 하루에 순수하게 늘어난 구독자 수. 줄었다 = 느는 속도 둔화이지 구독자 감소 아님.<br>
+      <b>월간 수치:</b> 5월 전체(31일) / 6월 1~21일 → 하루 평균 환산.
     </div>
   </details>
 
