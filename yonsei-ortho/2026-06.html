@@ -27,17 +27,25 @@
 
   /* verdict — the trunk-test answer, big and first */
   .verdict{
-    background:linear-gradient(135deg,#0b7a5e,#0e9e76); color:#fff;
-    border-radius:18px; padding:22px 22px; margin-bottom:18px; box-shadow:var(--shadow);
+    background:var(--card); color:var(--ink);
+    border-left:6px solid var(--accent);
+    border-radius:14px; padding:20px 22px; margin-bottom:24px;
+    box-shadow:0 2px 6px rgba(20,30,48,.08),0 12px 36px rgba(11,122,94,.12);
   }
-  .verdict .tag{font-size:12px; font-weight:700; opacity:.85; letter-spacing:.4px}
-  .verdict .line{font-size:19px; font-weight:700; margin-top:8px; letter-spacing:-.3px; line-height:1.45}
+  .verdict .tag{font-size:12px; font-weight:800; color:var(--accent); letter-spacing:.3px}
+  .verdict .line{font-size:19px; font-weight:700; margin-top:9px; letter-spacing:-.3px; line-height:1.5}
+
+  /* compare label */
+  .cmp{font-size:13px; font-weight:700; color:var(--muted); margin-bottom:10px; display:flex; align-items:center; gap:6px}
+  .cmp b{color:var(--ink)}
+  .cmp .arrow{color:var(--accent)}
 
   /* snapshot grid */
   .grid{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:22px}
   .stat{background:var(--card); border-radius:16px; padding:16px 16px 14px; box-shadow:var(--shadow)}
   .stat .k{font-size:12px; color:var(--muted); font-weight:600}
-  .stat .v{font-size:27px; font-weight:800; margin-top:6px; letter-spacing:-.6px}
+  .stat .prev{font-size:12px; color:#9aa3b0; font-weight:600; margin-top:7px}
+  .stat .v{font-size:27px; font-weight:800; margin-top:2px; letter-spacing:-.6px}
   .stat .d{font-size:13px; font-weight:700; margin-top:4px; display:inline-flex; align-items:center; gap:3px}
   .up{color:var(--up)} .down{color:var(--down)}
 
@@ -106,24 +114,29 @@
   </div>
 
   <!-- ⓪ 성장 스냅샷 -->
+  <div class="cmp">📊 지난달 <b>5월</b> <span class="arrow">→</span> 이번달 <b>6월</b> 비교</div>
   <div class="grid">
     <div class="stat">
       <div class="k">구독자</div>
+      <div class="prev">지난달 1,155</div>
       <div class="v">1,240</div>
       <div class="d up">▲ +85 (+7.3%)</div>
     </div>
     <div class="stat">
       <div class="k">조회수</div>
+      <div class="prev">지난달 35,800</div>
       <div class="v">42,000</div>
       <div class="d up">▲ +6,200 (+17%)</div>
     </div>
     <div class="stat">
       <div class="k">평균 조회율 <span style="color:var(--accent)">★</span></div>
+      <div class="prev">지난달 34%</div>
       <div class="v">38%</div>
       <div class="d up">▲ +4%p</div>
     </div>
     <div class="stat">
       <div class="k">총 시청시간</div>
+      <div class="prev">지난달 1,652시간</div>
       <div class="v">1,850시간</div>
       <div class="d up">▲ +12%</div>
     </div>
