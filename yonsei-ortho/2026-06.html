@@ -7,9 +7,10 @@
 <title>연세정형외과 유튜브 리포트 · 2026년 6월</title>
 <style>
   :root{
-    --bg:#f4f6f8; --card:#ffffff; --ink:#1a2230; --muted:#6b7585;
+    --bg:#f4f6f8; --card:#ffffff; --ink:#1a2230; --muted:#6b7585; --faint:#9aa3b0;
     --line:#e6eaef; --accent:#0b7a5e; --up:#0b9e6e; --down:#d6453a;
-    --pill:#eef6f2; --shadow:0 1px 3px rgba(20,30,48,.06),0 6px 24px rgba(20,30,48,.06);
+    --short:#7b3fe4; --shortsoft:#f3eefe;
+    --shadow:0 1px 3px rgba(20,30,48,.06),0 6px 24px rgba(20,30,48,.06);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{
@@ -19,65 +20,74 @@
   }
   .wrap{max-width:680px; margin:0 auto}
 
-  /* header */
   .head{margin-bottom:20px}
   .head .ch{font-size:13px; color:var(--accent); font-weight:700; letter-spacing:.3px}
   .head h1{font-size:24px; font-weight:800; margin-top:4px; letter-spacing:-.4px}
   .head .sub{font-size:13px; color:var(--muted); margin-top:6px}
 
-  /* verdict — the trunk-test answer, big and first */
+  /* verdict */
   .verdict{
-    background:var(--card); color:var(--ink);
-    border-left:6px solid var(--accent);
+    background:var(--card); color:var(--ink); border-left:6px solid var(--accent);
     border-radius:14px; padding:20px 22px; margin-bottom:24px;
     box-shadow:0 2px 6px rgba(20,30,48,.08),0 12px 36px rgba(11,122,94,.12);
   }
   .verdict .tag{font-size:12px; font-weight:800; color:var(--accent); letter-spacing:.3px}
-  .verdict .line{font-size:19px; font-weight:700; margin-top:9px; letter-spacing:-.3px; line-height:1.5}
+  .verdict .line{font-size:18px; font-weight:700; margin-top:9px; letter-spacing:-.3px; line-height:1.5}
 
-  /* compare label */
   .cmp{font-size:13px; font-weight:700; color:var(--muted); margin-bottom:10px; display:flex; align-items:center; gap:6px}
-  .cmp b{color:var(--ink)}
-  .cmp .arrow{color:var(--accent)}
+  .cmp b{color:var(--ink)} .cmp .arrow{color:var(--accent)}
 
-  /* snapshot grid */
-  .grid{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:22px}
-  .stat{background:var(--card); border-radius:16px; padding:16px 16px 14px; box-shadow:var(--shadow)}
+  /* stat grid */
+  .grid{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+  .grid.three{grid-template-columns:1fr 1fr 1fr}
+  .stat{background:var(--card); border-radius:16px; padding:15px 15px 13px; box-shadow:var(--shadow)}
   .stat .k{font-size:12px; color:var(--muted); font-weight:600}
-  .stat .prev{font-size:12px; color:#9aa3b0; font-weight:600; margin-top:7px}
-  .stat .v{font-size:27px; font-weight:800; margin-top:2px; letter-spacing:-.6px}
-  .stat .d{font-size:13px; font-weight:700; margin-top:4px; display:inline-flex; align-items:center; gap:3px}
+  .stat .prev{font-size:11px; color:var(--faint); font-weight:600; margin-top:6px}
+  .stat .v{font-size:24px; font-weight:800; margin-top:2px; letter-spacing:-.5px}
+  .stat .d{font-size:12px; font-weight:700; margin-top:3px}
   .up{color:var(--up)} .down{color:var(--down)}
 
-  /* section */
-  .sec{margin:26px 0 12px}
+  /* format section blocks */
+  .fmt{margin-top:14px}
+  .fmt-h{display:flex; align-items:baseline; gap:8px; margin:22px 0 4px}
+  .fmt-h .ic{font-size:16px}
+  .fmt-h .ti{font-size:16px; font-weight:800; letter-spacing:-.3px}
+  .fmt-h .role{font-size:12px; color:var(--muted); font-weight:600}
+  .fmt-long .ti{color:var(--accent)}
+  .fmt-short .ti{color:var(--short)}
+  .cmp.sm{font-size:12px; margin:6px 0 8px}
+
+  /* shorts efficiency callout */
+  .eff{background:var(--shortsoft); border-radius:14px; padding:14px 16px; margin-top:12px;
+    border-left:4px solid var(--short)}
+  .eff .et{font-size:12px; font-weight:800; color:var(--short); margin-bottom:6px}
+  .eff ul{list-style:none; font-size:13.5px; color:#33304a}
+  .eff li{padding:2px 0; display:flex; gap:7px}
+  .eff li::before{content:"›"; color:var(--short); font-weight:800}
+  .eff b{color:var(--ink)}
+
+  /* section header */
+  .sec{margin:28px 0 12px}
   .sec h2{font-size:15px; font-weight:800; display:flex; align-items:center; gap:7px}
   .sec h2 .dot{width:6px; height:6px; border-radius:50%; background:var(--accent)}
 
-  /* best video card */
   .vid{background:var(--card); border-radius:16px; padding:18px; box-shadow:var(--shadow)}
   .vid .t{font-size:16px; font-weight:700; letter-spacing:-.3px}
   .vid .row{display:flex; gap:18px; margin-top:14px; flex-wrap:wrap}
-  .vid .m{flex:1; min-width:90px}
+  .vid .m{flex:1; min-width:84px}
   .vid .m .mk{font-size:11px; color:var(--muted); font-weight:600}
   .vid .m .mv{font-size:18px; font-weight:800; margin-top:2px}
   .vid .why{margin-top:14px; padding-top:14px; border-top:1px solid var(--line); font-size:14px; color:#3a4456}
   .vid .why b{color:var(--ink)}
 
-  /* todos */
   .todos{list-style:none}
-  .todos li{
-    background:var(--card); border-radius:14px; padding:14px 16px; box-shadow:var(--shadow);
-    margin-bottom:10px; font-size:15px; font-weight:600; display:flex; gap:10px; align-items:flex-start;
-  }
-  .todos li .n{
-    flex:none; width:22px; height:22px; border-radius:50%; background:var(--pill); color:var(--accent);
-    font-size:12px; font-weight:800; display:flex; align-items:center; justify-content:center; margin-top:1px;
-  }
+  .todos li{background:var(--card); border-radius:14px; padding:14px 16px; box-shadow:var(--shadow);
+    margin-bottom:10px; font-size:15px; font-weight:600; display:flex; gap:10px; align-items:flex-start}
+  .todos li .n{flex:none; width:22px; height:22px; border-radius:50%; background:#eef6f2; color:var(--accent);
+    font-size:12px; font-weight:800; display:flex; align-items:center; justify-content:center; margin-top:1px}
   .star{color:#e0a500; font-weight:800}
   .todos li small{display:block; font-size:13px; font-weight:500; color:var(--muted); margin-top:3px}
 
-  /* appendix */
   details{margin-top:30px; background:var(--card); border-radius:14px; box-shadow:var(--shadow); overflow:hidden}
   summary{cursor:pointer; padding:16px 18px; font-size:14px; font-weight:700; color:var(--muted); list-style:none}
   summary::-webkit-details-marker{display:none}
@@ -88,12 +98,8 @@
   th,td{text-align:left; padding:9px 6px; border-bottom:1px solid var(--line)}
   th{color:var(--muted); font-weight:600; font-size:12px}
   td.num{text-align:right; font-variant-numeric:tabular-nums; font-weight:600}
-  .traffic{margin-top:18px}
-  .bar{display:flex; align-items:center; gap:10px; margin-bottom:9px; font-size:13px}
-  .bar .bk{width:78px; color:var(--muted); flex:none}
-  .bar .bt{flex:1; background:var(--line); border-radius:999px; height:9px; overflow:hidden}
-  .bar .bf{height:100%; background:var(--accent); border-radius:999px}
-  .bar .bp{width:38px; text-align:right; font-weight:700; flex:none}
+  .taglet{font-size:10px; font-weight:800; padding:1px 6px; border-radius:6px; vertical-align:middle}
+  .tl-long{background:#e6f4ee; color:var(--accent)} .tl-short{background:var(--shortsoft); color:var(--short)}
 
   .foot{text-align:center; font-size:12px; color:var(--muted); margin-top:34px; line-height:1.7}
 </style>
@@ -107,14 +113,14 @@
     <div class="sub">2026년 6월 · 5월 31일 → 6월 29일 기준</div>
   </div>
 
-  <!-- ① 한 줄 평 = Trunk Test 답: "이번 달 잘했나?" -->
+  <!-- 한 줄 평 -->
   <div class="verdict">
     <div class="tag">📈 이번 달 한 줄 평</div>
-    <div class="line">성장 중입니다. 영상을 끝까지 보는 비율이 올라 콘텐츠 질이 좋아졌어요. 다음 과제는 더 많은 사람에게 노출시키는 것.</div>
+    <div class="line">쇼츠가 새 환자 후보를 대거 데려왔고(도달 +171%, 신규 구독의 75%가 쇼츠에서), 롱폼은 끝까지 보는 비율이 올라 신뢰가 깊어졌습니다. 다음은 효과가 검증된 쇼츠 편수를 늘려 유입을 더 키울 차례.</div>
   </div>
 
-  <!-- ⓪ 성장 스냅샷 -->
-  <div class="cmp">📊 지난달 <b>5월</b> <span class="arrow">→</span> 이번달 <b>6월</b> 비교</div>
+  <!-- ⓪ 채널 전체 -->
+  <div class="cmp">📊 지난달 <b>5월</b> <span class="arrow">→</span> 이번달 <b>6월</b> · 채널 전체</div>
   <div class="grid">
     <div class="stat">
       <div class="k">구독자</div>
@@ -123,47 +129,65 @@
       <div class="d up">▲ +85 (+7.3%)</div>
     </div>
     <div class="stat">
-      <div class="k">조회수</div>
-      <div class="prev">지난달 35,800</div>
-      <div class="v">42,000</div>
-      <div class="d up">▲ +6,200 (+17%)</div>
-    </div>
-    <div class="stat">
-      <div class="k">평균 조회율 <span style="color:var(--accent)">★</span></div>
-      <div class="prev">지난달 34%</div>
-      <div class="v">38%</div>
-      <div class="d up">▲ +4%p</div>
-    </div>
-    <div class="stat">
       <div class="k">총 시청시간</div>
-      <div class="prev">지난달 1,652시간</div>
-      <div class="v">1,850시간</div>
-      <div class="d up">▲ +12%</div>
+      <div class="prev">지난달 1,700시간</div>
+      <div class="v">1,920시간</div>
+      <div class="d up">▲ +13%</div>
     </div>
   </div>
 
-  <!-- ② 이달의 영상 -->
-  <div class="sec"><h2><span class="dot"></span>이달의 영상</h2></div>
+  <!-- 🎬 롱폼 -->
+  <div class="fmt fmt-long">
+    <div class="fmt-h"><span class="ic">🎬</span><span class="ti">롱폼</span><span class="role">— 환자 신뢰 엔진 (깊게 보고 내원)</span></div>
+    <div class="cmp sm">이번달 6편 · 지난달 5편</div>
+    <div class="grid three">
+      <div class="stat"><div class="k">조회수</div><div class="prev">지난달 21,500</div><div class="v">24,000</div><div class="d up">▲ +12%</div></div>
+      <div class="stat"><div class="k">평균 조회율 ★</div><div class="prev">지난달 37%</div><div class="v">41%</div><div class="d up">▲ +4%p</div></div>
+      <div class="stat"><div class="k">클릭률 CTR</div><div class="prev">지난달 5.5%</div><div class="v">6.2%</div><div class="d up">▲ +0.7%p</div></div>
+    </div>
+  </div>
+
+  <!-- ⚡ 쇼츠 -->
+  <div class="fmt fmt-short">
+    <div class="fmt-h"><span class="ic">⚡</span><span class="ti">쇼츠</span><span class="role">— 도달·발견 (새 사람 끌어오기)</span></div>
+    <div class="cmp sm">이번달 12편 · 지난달 6편</div>
+    <div class="grid three">
+      <div class="stat"><div class="k">조회수</div><div class="prev">지난달 14,000</div><div class="v">38,000</div><div class="d up">▲ +171%</div></div>
+      <div class="stat"><div class="k">조회율(끝까지)</div><div class="prev">지난달 58%</div><div class="v">62%</div><div class="d up">▲ +4%p</div></div>
+      <div class="stat"><div class="k">쇼츠발 신규구독</div><div class="prev">지난달 22</div><div class="v">64</div><div class="d up">▲ +191%</div></div>
+    </div>
+
+    <div class="eff">
+      <div class="et">⚡ 쇼츠 효율 — 왜 쇼츠를 늘릴 만한가</div>
+      <ul>
+        <li><span>쇼츠 1편당 평균 <b>3,170회</b> 도달 — 롱폼 1편(4,000회)의 <b>약 80%를 1/3 제작비로</b></span></li>
+        <li><span>이번 달 신규 구독 85명 중 <b>64명(75%)</b>이 쇼츠에서 유입</span></li>
+        <li><span>전체 조회의 <b>61%</b>를 쇼츠가 담당 — 채널 입구 역할</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 이달의 영상 -->
+  <div class="sec"><h2><span class="dot"></span>이달의 영상 (롱폼)</h2></div>
   <div class="vid">
     <div class="t">“무릎 통증, 수술 없이 좋아지는 법”</div>
     <div class="row">
-      <div class="m"><div class="mk">조회수</div><div class="mv">12,400</div></div>
-      <div class="m"><div class="mk">평균 조회율</div><div class="mv">47%</div></div>
+      <div class="m"><div class="mk">조회수</div><div class="mv">9,200</div></div>
+      <div class="m"><div class="mk">평균 조회율</div><div class="mv">49%</div></div>
       <div class="m"><div class="mk">클릭률(CTR)</div><div class="mv">7.1%</div></div>
     </div>
     <div class="why">
-      <b>왜 떴나 —</b> 환자들이 가장 많이 검색하는 “수술 없이”라는 말을 제목에 넣은 게 적중했습니다.
-      썸네일 클릭률(7.1%)이 채널 평균(5.2%)보다 높았고, 끝까지 본 비율도 47%로 매우 높음.
-      <b>이런 “고민 해결형” 제목을 다음 영상에도 이어가면 좋겠습니다.</b>
+      <b>왜 떴나 —</b> 환자들이 가장 많이 검색하는 “수술 없이”를 제목에 넣은 게 적중. 끝까지 본 비율 49%로 채널 최고.
+      <b>이 “고민 해결형” 제목을 롱폼·쇼츠 양쪽에 이어가면 좋겠습니다.</b>
     </div>
   </div>
 
-  <!-- ③ 다음 달 할 일 -->
+  <!-- 다음 달 할 일 -->
   <div class="sec"><h2><span class="dot"></span>다음 달 할 일 <span style="font-size:12px;color:var(--muted);font-weight:600">(<span class="star">★</span> = 원장님 결정 필요)</span></h2></div>
   <ul class="todos">
-    <li><span class="n">1</span><div>“수술 없이 ○○ 좋아지는 법” 시리즈로 2편 더 제작<small>이번 달 베스트 영상 공식을 그대로 반복</small></div></li>
-    <li><span class="n">2</span><div><span class="star">★</span> 어깨 통증 영상 촬영 일정 잡기<small>검색 수요 많은 주제. 원장님 촬영 가능일 알려주시면 진행</small></div></li>
-    <li><span class="n">3</span><div>썸네일 A/B 테스트로 노출 클릭률 끌어올리기<small>조회수보다 “노출 → 클릭” 구간이 다음 성장 포인트</small></div></li>
+    <li><span class="n">1</span><div><span class="star">★</span> 쇼츠 월 12편 → 20편으로 증편<small>신규 구독 75%가 쇼츠발 + 1편당 도달 효율 높음 → 유입 키울 가장 빠른 레버 (제작 편수 늘어 비용 결정 필요)</small></div></li>
+    <li><span class="n">2</span><div>“수술 없이 ○○ 좋아지는 법” 롱폼 공식 1편 더<small>이번 달 베스트 영상 공식 반복 — 신뢰 콘텐츠 강화</small></div></li>
+    <li><span class="n">3</span><div><span class="star">★</span> 어깨 통증 촬영 일정 잡기 (롱폼 1 + 쇼츠 3편 소스)<small>검색 수요 많은 주제. 한 번 촬영으로 롱폼·쇼츠 동시 확보</small></div></li>
   </ul>
 
   <!-- 부록 -->
@@ -173,32 +197,24 @@
       <table>
         <thead><tr><th>영상</th><th class="num">조회수</th><th class="num">조회율</th><th class="num">CTR</th></tr></thead>
         <tbody>
-          <tr><td>무릎 통증, 수술 없이 좋아지는 법</td><td class="num">12,400</td><td class="num">47%</td><td class="num">7.1%</td></tr>
-          <tr><td>허리 디스크 자가진단 3가지</td><td class="num">9,800</td><td class="num">41%</td><td class="num">5.8%</td></tr>
-          <tr><td>발목 삐었을 때 절대 하면 안 되는 것</td><td class="num">7,200</td><td class="num">39%</td><td class="num">5.4%</td></tr>
-          <tr><td>관절 영양제, 효과 있을까?</td><td class="num">4,100</td><td class="num">28%</td><td class="num">4.2%</td></tr>
+          <tr><td><span class="taglet tl-long">롱폼</span> 무릎 통증, 수술 없이 좋아지는 법</td><td class="num">9,200</td><td class="num">49%</td><td class="num">7.1%</td></tr>
+          <tr><td><span class="taglet tl-long">롱폼</span> 허리 디스크 자가진단 3가지</td><td class="num">6,400</td><td class="num">42%</td><td class="num">5.8%</td></tr>
+          <tr><td><span class="taglet tl-short">쇼츠</span> 무릎에서 소리 나면?</td><td class="num">11,800</td><td class="num">64%</td><td class="num">—</td></tr>
+          <tr><td><span class="taglet tl-short">쇼츠</span> 발목 삐었을 때 1초 응급처치</td><td class="num">8,900</td><td class="num">61%</td><td class="num">—</td></tr>
+          <tr><td><span class="taglet tl-short">쇼츠</span> 이 자세, 허리 망칩니다</td><td class="num">7,300</td><td class="num">59%</td><td class="num">—</td></tr>
         </tbody>
       </table>
 
-      <div class="traffic">
-        <div style="font-size:12px;color:var(--muted);font-weight:700;margin-bottom:10px">트래픽 소스 (어디서 영상을 보러 왔나)</div>
-        <div class="bar"><span class="bk">YouTube 검색</span><span class="bt"><span class="bf" style="width:46%"></span></span><span class="bp">46%</span></div>
-        <div class="bar"><span class="bk">추천 영상</span><span class="bt"><span class="bf" style="width:31%"></span></span><span class="bp">31%</span></div>
-        <div class="bar"><span class="bk">탐색 기능</span><span class="bt"><span class="bf" style="width:15%"></span></span><span class="bp">15%</span></div>
-        <div class="bar"><span class="bk">기타</span><span class="bt"><span class="bf" style="width:8%"></span></span><span class="bp">8%</span></div>
-        <div style="font-size:12px;color:var(--muted);margin-top:6px">검색 비중이 높음 = 환자들이 “직접 궁금해서 찾아온다”는 뜻. 가장 건강한 신호.</div>
-      </div>
-
-      <div class="traffic">
-        <div style="font-size:12px;color:var(--muted);font-weight:700;margin:18px 0 10px">시청자</div>
-        <div class="bar"><span class="bk">신규 시청자</span><span class="bt"><span class="bf" style="width:62%"></span></span><span class="bp">62%</span></div>
-        <div class="bar"><span class="bk">재방문</span><span class="bt"><span class="bf" style="width:38%"></span></span><span class="bp">38%</span></div>
+      <div style="margin-top:18px">
+        <div style="font-size:12px;color:var(--muted);font-weight:700;margin-bottom:8px">트래픽 소스</div>
+        <div style="font-size:13px;color:#3a4456">YouTube 검색 41% · 추천 영상 34% · Shorts 피드 18% · 기타 7%<br>
+        <span style="color:var(--muted)">검색 비중 높음 = 환자가 직접 궁금해서 찾아온다는 가장 건강한 신호. Shorts 피드 유입이 새로 18% 생김.</span></div>
       </div>
     </div>
   </details>
 
   <div class="foot">
-    데이터 출처 — YouTube Studio 분석<br>
+    데이터 출처 — YouTube Studio 분석 (콘텐츠 유형: 동영상/Shorts 분리)<br>
     ※ 샘플 데이터로 만든 미리보기입니다
   </div>
 
